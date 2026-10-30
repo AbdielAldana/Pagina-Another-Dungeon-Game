@@ -1,0 +1,227 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "example-rules-v2",
+  "name": "Ruinas con reglas",
+  "description": "Puertas r/R, patrullas, cofre, palanca y marcadores sin resolver la semilla.",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room2",
+  "backgroundCrop": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 256
+  },
+  "gameGrid": {
+    "x": 8,
+    "y": 48,
+    "cellSize": 16,
+    "columns": 15,
+    "rows": 10
+  },
+  "rules": {
+    "roomType": "standard",
+    "onlyTheseSides": true,
+    "allowedDoorSides": [
+      "left",
+      "right"
+    ],
+    "access": "key"
+  },
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [
+    {
+      "x": 40,
+      "y": 144,
+      "width": 80,
+      "height": 8
+    }
+  ],
+  "objects": [
+    {
+      "id": "door-left",
+      "assetId": "door",
+      "x": 8,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "side": "left",
+      "rule": "possible",
+      "behavior": null
+    },
+    {
+      "id": "door-right",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "required",
+      "behavior": null
+    },
+    {
+      "id": "enemy-fixed",
+      "assetId": "skeleton",
+      "x": 72,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "enemy": {
+        "spawnMode": "fixed",
+        "patrol": {
+          "axis": "horizontal",
+          "from": 40,
+          "to": 184
+        }
+      },
+      "behavior": null
+    },
+    {
+      "id": "enemy-seeded",
+      "assetId": "bat",
+      "x": 160,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "enemy": {
+        "spawnMode": "seeded",
+        "patrol": {
+          "axis": "vertical",
+          "from": 112,
+          "to": 184
+        }
+      },
+      "behavior": null
+    },
+    {
+      "id": "chest-01",
+      "assetId": "chest",
+      "x": 104,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "item",
+      "behavior": {
+        "type": "chest",
+        "initialState": "closed",
+        "frames": {
+          "closed": 0,
+          "transition": 1,
+          "openNearby": 2
+        }
+      }
+    },
+    {
+      "id": "lever-01",
+      "assetId": "label",
+      "x": 136,
+      "y": 80,
+      "frame": 2,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "item",
+      "behavior": {
+        "type": "lever",
+        "initialState": "initial",
+        "frames": {
+          "initial": 0,
+          "transition": 1,
+          "activated": 2
+        },
+        "staysVisible": true
+      }
+    },
+    {
+      "id": "seat-01",
+      "assetId": "seat",
+      "x": 72,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "behavior": null
+    }
+  ],
+  "markers": [
+    {
+      "id": "candidate-01",
+      "type": "Q",
+      "x": 104,
+      "y": 112
+    },
+    {
+      "id": "reward-01",
+      "type": "&",
+      "x": 136,
+      "y": 112,
+      "required": true
+    }
+  ]
+}

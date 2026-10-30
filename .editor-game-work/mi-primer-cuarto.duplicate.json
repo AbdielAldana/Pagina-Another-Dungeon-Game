@@ -1,0 +1,99 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "ecc67e92-7132-4900-b763-b152d05f0d43",
+  "name": "Mi primer cuarto",
+  "description": "",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room2",
+  "backgroundCrop": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 256
+  },
+  "gameGrid": {
+    "x": 8,
+    "y": 48,
+    "cellSize": 16,
+    "columns": 15,
+    "rows": 10
+  },
+  "rules": {
+    "roomType": "standard",
+    "onlyTheseSides": true,
+    "allowedDoorSides": [
+      "left",
+      "right",
+      "up",
+      "down"
+    ],
+    "access": "normal"
+  },
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "c42d1af8-6d61-4bab-a12d-6a958fdee13d",
+      "assetId": "skeleton",
+      "x": 88,
+      "y": 111,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "behavior": null
+    },
+    {
+      "id": "6ddedd57-48dd-4795-8aef-d92b91c5abc7",
+      "assetId": "chest",
+      "x": 180,
+      "y": 107,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "behavior": null
+    },
+    {
+      "id": "e7d2423b-72e1-4155-a35d-1fc2b0292ffa",
+      "assetId": "box",
+      "x": 152,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "behavior": null
+    }
+  ],
+  "markers": []
+}

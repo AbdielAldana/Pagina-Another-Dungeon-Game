@@ -1,0 +1,164 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 1,
+  "id": "9d323109-6108-48f2-b079-a3516b6bf034",
+  "name": "Mi primer cuarto",
+  "description": "",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room2",
+  "spawn": {
+    "x": 127,
+    "y": 192
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "3f5bfe16-3a5f-4c87-8d67-6da29adbc21b",
+      "assetId": "table",
+      "x": 185,
+      "y": 157,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 0,
+        "y": 8,
+        "width": 32,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": ""
+    },
+    {
+      "id": "91a69d83-c20e-499c-a658-e5d3d52da5a3",
+      "assetId": "library_front",
+      "x": 48,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": ""
+    },
+    {
+      "id": "cc7119e7-5821-42dd-8f5d-8ed2c3a7ed83",
+      "assetId": "library_front",
+      "x": 30,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": ""
+    },
+    {
+      "id": "e39ff738-8dcf-4989-bb44-df6228ef932c",
+      "assetId": "skeleton",
+      "x": 45,
+      "y": 89,
+      "frame": 12,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 8,
+        "width": 16,
+        "height": 8
+      },
+      "role": "enemy",
+      "destination": ""
+    },
+    {
+      "id": "2b4bf992-0d33-4a69-8457-15cd1235c70f",
+      "assetId": "chest",
+      "x": 159,
+      "y": 91,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 0,
+        "y": 8,
+        "width": 16,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": ""
+    },
+    {
+      "id": "dd95d213-7e7d-4d09-bc03-4ad25a525a39",
+      "assetId": "door",
+      "x": 8,
+      "y": 109,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "destination": ""
+    },
+    {
+      "id": "4c60f682-d8da-404d-b635-2aa25f586c9f",
+      "assetId": "door",
+      "x": 232,
+      "y": 107,
+      "frame": 0,
+      "rotation": 180,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "destination": ""
+    },
+    {
+      "id": "5d489e40-7187-49f6-8629-07e08c1b2827",
+      "assetId": "door",
+      "x": 111,
+      "y": 192,
+      "frame": 0,
+      "rotation": 270,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "destination": ""
+    }
+  ]
+}

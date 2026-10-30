@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17121c">
+  <meta name="description" content="AnotherDungeon: explora una mazmorra cambiante, rescata aventureros y sobrevive con la energía que te queda.">
+  <title>AnotherDungeon — Explora. Rescata. Sobrevive.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pixel.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="AnotherDungeon, inicio"><span class="brand-mark">✳</span><span>AnotherDungeon</span></a>
+    <nav class="nav-links" aria-label="Navegación principal"><a href="#aventura">La aventura</a><a href="#como-jugar">Cómo jugar</a><a href="#changelog">Changelog</a><a href="editor.html">Crear cuartos</a></nav>
+    <a class="nav-play" href="game.html">Jugar ahora <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="version-chip"><span>●</span> VERSION ALPHA · v2</p>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> UNA MAZMORRA. INFINITAS POSIBILIDADES.</p>
+        <h1>La oscuridad<br>no es el final<span class="title-mark">.</span></h1>
+        <p class="hero-text">Eres un mago sanador. Entra en una mazmorra que nunca se repite, encuentra a quienes se perdieron y decide cuánto estás dispuesto a arriesgar para salir.</p>
+        <div class="hero-actions"><a class="button button-primary" href="game.html">Entrar a la mazmorra <span>↗</span></a><a class="text-link" href="#aventura">Descubre la aventura <span>↓</span></a><a class="download-link" href="alphav2.gba" download="AnotherDungeon-Alpha-v2.gba">Descargar ROM <span>↓</span></a><a class="download-link" href="editor.html">Crear un cuarto <span>＋</span></a></div>
+        <div class="hero-note"><span class="note-line"></span><span>Tu energía es tu vida. Cada decisión cuenta.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Captura del juego">
+        <div class="art-frame"><img class="art-screenshot" src="Captura%20de%20pantalla%202026-10-21%20125031.png" alt="Captura de pantalla de AnotherDungeon en el piso 3"></div>
+      </div>
+      <div class="hero-bottom"><span>UN JUEGO DE EXPLORACIÓN Y SUPERVIVENCIA</span><span>DESPLÁZATE PARA DESCUBRIR <b>↓</b></span></div>
+    </section>
+
+    <section class="intro section-wrap" id="aventura">
+      <div class="section-kicker">01 <span></span> LA AVENTURA</div>
+      <div class="intro-grid"><h2>Cada piso es<br>un mundo nuevo<span class="title-mark">.</span></h2><div class="intro-copy"><p>Pasillos que cambian. Habitaciones que esconden peligros. Aventureros que esperan ser encontrados. Ninguna expedición se parece a la anterior.</p><p>Explora con cuidado, consigue las llaves y busca las escaleras. La mazmorra siempre te ofrece otra oportunidad… si te queda energía para tomarla.</p></div></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-number">01 / EXPLORA</span><span class="feature-icon">⌖</span><h3>Un mapa por descubrir</h3><p>La distribución cambia en cada partida. Avanza con cautela: el mapa solo revela lo que te atreves a explorar.</p><span class="feature-arrow">↗</span></article>
+        <article class="feature-card"><span class="feature-number">02 / RESCATA</span><span class="feature-icon">✧</span><h3>Nadie se queda atrás</h3><p>Encuentra aventureros perdidos y llévalos hasta la fogata. Cada rescate puede cambiar tu expedición.</p><span class="feature-arrow">↗</span></article>
+        <article class="feature-card"><span class="feature-number">03 / SOBREVIVE</span><span class="feature-icon">◉</span><h3>Cuida cada chispa</h3><p>Explorar, correr y recibir golpes consume energía. Si se agota, la mazmorra habrá ganado.</p><span class="feature-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="camp-section" id="como-jugar"><div class="camp-inner"><div class="camp-visual"><div class="camp-ring"></div><div class="camp-sun">✳</div><div class="camp-caption">PUNTO DE DESCANSO <span>✦</span> PISO 01</div></div><div class="camp-copy"><div class="section-kicker">02 <span></span> ELIGE TU CAMINO</div><h2>La fogata puede<br>salvarte la vida<span class="title-mark">.</span></h2><p>En el corazón de cada piso, la fogata es tu lugar seguro. Recupera energía, reaviva sus llamas y entrega a los aventureros que rescataste para recibir una recompensa.</p><p>Elige con cuidado: una llave, un mapa revelado, más energía o una mejora para tu magia. Lo que aceptes puede marcar la diferencia en el siguiente pasillo.</p><div class="camp-tags"><span>RECUPERA ENERGÍA</span><span>ELIGE UNA RECOMPENSA</span><span>PREPARA TU SIGUIENTE PASO</span></div></div></div></section>
+
+    <section class="magic-section section-wrap"><div class="section-kicker">03 <span></span> MAGIA A TU MANERA</div><div class="magic-heading"><h2>Rescata. Recibe.<br>Adáptate<span class="title-mark">.</span></h2><p>Cada aventurero rescatado te ofrece una nueva habilidad para el botón A. Cambia tu forma de sobrevivir según lo que la mazmorra ponga en tu camino.</p></div><div class="spell-list"><div class="spell"><span class="spell-glyph">◇</span><span class="spell-name">Escudo</span><span class="spell-desc">Atraviesa una habitación sin recibir daño.</span><span class="spell-key">A</span></div><div class="spell"><span class="spell-glyph">◌</span><span class="spell-name">Invisibilidad</span><span class="spell-desc">Pasa inadvertido ante los enemigos.</span><span class="spell-key">A</span></div><div class="spell"><span class="spell-glyph">⌁</span><span class="spell-name">Destello</span><span class="spell-desc">Desplázate rápidamente para escapar.</span><span class="spell-key">A</span></div><div class="spell"><span class="spell-glyph">✳</span><span class="spell-name">Estallido</span><span class="spell-desc">Acaba con todos los enemigos de una habitación.</span><span class="spell-key">A</span></div></div></section>
+
+    <section class="final-cta"><div class="cta-stars" aria-hidden="true">✦　·　✧　·　✦</div><p class="eyebrow">LA MAZMORRA TE ESTÁ ESPERANDO</p><h2>¿Hasta dónde<br>podrás llegar<span class="title-mark">?</span></h2><a class="button button-primary" href="game.html">Comenzar expedición <span>↗</span></a><p class="cta-caption">EXPLORA. RESCATA. DECIDE. SOBREVIVE.</p></section>
+    <section class="changelog section-wrap" id="changelog"><div class="section-kicker">04 <span></span> CHANGELOG</div><div class="changelog-heading"><h2>AnotherDungeon<br>v2<span class="title-mark">.</span></h2><p>Estado actual de la versión Alpha.</p></div>
+      <article class="change-entry"><div class="change-version"><span>v2</span><span>ALPHA</span></div><div class="change-content"><div class="change-title"><h3>Update UI</h3><time datetime="2026-10-24">24 de octubre de 2026</time></div><a class="download-link changelog-download" href="alphav2.gba" download="AnotherDungeon-Alpha-v2.gba">Descargar Alpha v2 <span>↓</span></a><ul>
+        <li><strong>Enemigos:</strong> esqueletos en cuartos de ruinas y murciélagos en cuartos de piedra. Su cantidad y patrones dependen de la semilla. Al tocar al jugador, le quitan energía y este parpadea; ya no lo empujan. La hitbox del esqueleto es de 8×8, centrada en el sprite.</li>
+        <li><strong>Pociones:</strong> aparecen según la semilla, con un máximo de una por cuarto. Las de energía restauran 5 puntos y las de sprint, un tercio de la barra. La barra correspondiente parpadea al recogerlas.</li>
+        <li><strong>Dash:</strong> se activa con el botón A y consume la mitad de la barra de sprint.</li>
+        <li><strong>Aventureros y fogata:</strong> llevar un aventurero cuesta energía al cruzar puertas; entregarlo en la habitación especial restaura 5 puntos y genera una recompensa. Los aventureros sentados se acomodan alrededor de la fogata y alternan su animación.</li>
+        <li><strong>Habitación especial:</strong> usa el fondo <code>room_campfire</code>, con columnas y librerías decorativas y sus hitboxes ajustadas.</li>
+        <li><strong>Interfaz:</strong> barras de energía y sprint. El inventario muestra las llaves y un contador de aventureros rescatados, que aumenta al entregarlos en la fogata.</li>
+        <li><strong>Mapa y menús:</strong> el piso y el nombre del cuarto aparecen al abrir el mapa. Mapa con <strong>L</strong>, inventario con <strong>R</strong> y pausa con <strong>Start</strong>. Mapa, inventario y pausa oscurecen el fondo al 80%; los iconos del inventario quedan visibles.</li>
+        <li><strong>Gestión de sprites:</strong> se libera el espacio de los elementos del cuarto al cambiar de habitación y se corrigió la aparición de las barras al regresar al primer cuarto del piso.</li>
+      </ul></div></article>
+      <article class="change-entry"><div class="change-version"><span>v1</span><span>ALPHA</span></div><div class="change-content"><div class="change-title"><h3>Versión inicial</h3><span class="change-current">BUILD ALPHA</span></div><a class="download-link changelog-download" href="alphav1.gba" download="AnotherDungeon-Alpha-v1.gba">Descargar Alpha v1 <span>↓</span></a><ul><li><strong>Inicio:</strong> elige empezar con una semilla usando las flechas o selecciona una aleatoria.</li><li><strong>Pisos:</strong> habitaciones aleatorias con varios diseños y un cuarto tutorial al inicio del primer piso.</li><li><strong>Exploración:</strong> pulsa L para ver los cuartos descubiertos y sus conexiones; los cambios de cuarto y piso usan un fundido.</li><li><strong>Llaves y puertas:</strong> consigue llaves para abrir los cuartos especiales y las escaleras.</li><li><strong>NPC y fogata:</strong> lleva un NPC a la vez; cruzar cada puerta con él cuesta 1 de energía y dejarlo junto a la fogata recupera 5.</li><li><strong>Energía:</strong> empiezas con 15; descubrir un cuarto cuesta 1 y la fogata restaura 10 una vez por piso. Al llegar a cero, aparece Game Over.</li><li><strong>Controles:</strong> Start abre las opciones y Select reinicia el cuarto.</li></ul></div></article>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">✳</span><span>AnotherDungeon</span></a><span>UNA EXPEDICIÓN A LA VEZ.</span><a href="game.html">ENTRAR AL JUEGO ↗</a></footer>
+</body>
+</html>

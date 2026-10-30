@@ -1,0 +1,582 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "f0342b77-114d-58bd-be1f-f7f6e52e0e53",
+  "name": "Fogata XDDD",
+  "description": "Convertido de Cuartos Composicion.txt",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room_campfire",
+  "backgroundOptions": [
+    "room_campfire"
+  ],
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "a5bb4aa7-6a0a-5ff8-b548-18d040f5ce42",
+      "assetId": "door",
+      "x": 112,
+      "y": 48,
+      "frame": 0,
+      "rotation": 270,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "up",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 0,
+        "col": 7
+      }
+    },
+    {
+      "id": "59c527fc-788f-5b09-9df1-4a0944295dd4",
+      "assetId": "spikes",
+      "x": 24,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "hazard",
+      "destination": "",
+      "sourceSymbol": "d",
+      "sourceCell": {
+        "row": 1,
+        "col": 1
+      },
+      "collisionProfile": "explicit",
+      "alwaysActive": false
+    },
+    {
+      "id": "fcab5a26-dbb7-5b4b-bc28-253cdccd21e6",
+      "assetId": "column",
+      "x": 40,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 1,
+        "col": 2
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "d7d50d3f-bac4-593b-b467-af849d228d45",
+      "assetId": "library_front",
+      "x": 56,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "f",
+      "sourceCell": {
+        "row": 1,
+        "col": 3
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "ea882ec4-f600-5e33-a431-ffa206ed029a",
+      "assetId": "library_front",
+      "x": 184,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": true,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "f",
+      "sourceCell": {
+        "row": 1,
+        "col": 11
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "fdbbcdb0-bde8-57e8-876a-9e2c9097e14e",
+      "assetId": "column",
+      "x": 200,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 1,
+        "col": 12
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "85344d03-113a-5268-ac20-c32ac1046bb7",
+      "assetId": "spikes",
+      "x": 216,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "hazard",
+      "destination": "",
+      "sourceSymbol": "d",
+      "sourceCell": {
+        "row": 1,
+        "col": 13
+      },
+      "collisionProfile": "explicit",
+      "alwaysActive": false
+    },
+    {
+      "id": "a2e6b559-95f9-5557-b672-a734f583ca41",
+      "assetId": "lever",
+      "x": 40,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "lever",
+      "destination": "",
+      "sourceSymbol": "l",
+      "sourceCell": {
+        "row": 3,
+        "col": 2
+      },
+      "collisionProfile": "explicit",
+      "behavior": "reward-lever",
+      "spawnMode": "choose-one-per-room-by-seed"
+    },
+    {
+      "id": "4f4b249e-273d-5183-9ed2-fe84518f3c02",
+      "assetId": "lever",
+      "x": 200,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "lever",
+      "destination": "",
+      "sourceSymbol": "l",
+      "sourceCell": {
+        "row": 3,
+        "col": 12
+      },
+      "collisionProfile": "explicit",
+      "behavior": "reward-lever",
+      "spawnMode": "choose-one-per-room-by-seed"
+    },
+    {
+      "id": "b57595b6-ab40-50da-8913-6c9ed8c94669",
+      "assetId": "door",
+      "x": 8,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "left",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 4,
+        "col": 0
+      }
+    },
+    {
+      "id": "0c743c7d-ba75-5920-b5c9-3e885947bdd8",
+      "assetId": "campfire",
+      "x": 120,
+      "y": 104,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "interactive",
+      "destination": "",
+      "sourceSymbol": "c",
+      "sourceCell": {
+        "row": 4,
+        "col": 7
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "701ca4fd-90c6-5a56-a5af-b48ff6339639",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 180,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 4,
+        "col": 14
+      }
+    },
+    {
+      "id": "7504d318-bcf0-56ff-b192-07d5ac088fc2",
+      "assetId": "column",
+      "x": 40,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 6,
+        "col": 2
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "1fcc49e1-abc0-57e3-b0d2-895c1cbff47f",
+      "assetId": "library_back",
+      "x": 56,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 6,
+        "col": 3
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "6f577277-61d0-5fe2-b8ae-1de0bdd4ee97",
+      "assetId": "library_back",
+      "x": 184,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": true,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 6,
+        "col": 11
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "64462cb8-d636-56b0-9bb6-9b114c632ecf",
+      "assetId": "column",
+      "x": 200,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 6,
+        "col": 12
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "77f391f8-9447-5e7b-9a0a-00dfef71ab1f",
+      "assetId": "spikes",
+      "x": 24,
+      "y": 176,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "hazard",
+      "destination": "",
+      "sourceSymbol": "d",
+      "sourceCell": {
+        "row": 8,
+        "col": 1
+      },
+      "collisionProfile": "explicit",
+      "alwaysActive": false
+    },
+    {
+      "id": "dfded00c-1486-5496-aa63-71815eae69ce",
+      "assetId": "spikes",
+      "x": 216,
+      "y": 176,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "hazard",
+      "destination": "",
+      "sourceSymbol": "d",
+      "sourceCell": {
+        "row": 8,
+        "col": 13
+      },
+      "collisionProfile": "explicit",
+      "alwaysActive": false
+    },
+    {
+      "id": "0016f226-30a3-5800-8a63-7d6b9008d82c",
+      "assetId": "door",
+      "x": 112,
+      "y": 192,
+      "frame": 0,
+      "rotation": 90,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "down",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 9,
+        "col": 7
+      }
+    }
+  ],
+  "markers": [
+    {
+      "id": "73a42390-0649-5d92-ad11-c2aab9b5f566",
+      "type": "npc_delivery",
+      "x": 128,
+      "y": 104,
+      "required": false,
+      "sourceSymbol": "3",
+      "sourceCell": {
+        "row": 3,
+        "col": 7
+      },
+      "slot": 2
+    },
+    {
+      "id": "70595108-1699-5809-949f-b43d58ec688d",
+      "type": "npc_delivery",
+      "x": 112,
+      "y": 120,
+      "required": false,
+      "sourceSymbol": "1",
+      "sourceCell": {
+        "row": 4,
+        "col": 6
+      },
+      "slot": 0
+    },
+    {
+      "id": "da0cd470-5bee-57a3-95ff-f11bcfb58b71",
+      "type": "npc_delivery",
+      "x": 144,
+      "y": 120,
+      "required": false,
+      "sourceSymbol": "2",
+      "sourceCell": {
+        "row": 4,
+        "col": 8
+      },
+      "slot": 1
+    },
+    {
+      "id": "b3a4812f-8cf2-535e-8af0-3272f5cc1387",
+      "type": "random",
+      "x": 128,
+      "y": 152,
+      "required": false,
+      "sourceSymbol": "$",
+      "sourceCell": {
+        "row": 6,
+        "col": 7
+      }
+    },
+    {
+      "id": "5cdbfb83-3a0f-54e4-841b-7d1332056120",
+      "type": "ability",
+      "x": 128,
+      "y": 152,
+      "required": false,
+      "sourceSymbol": "$",
+      "sourceCell": {
+        "row": 6,
+        "col": 7
+      }
+    }
+  ],
+  "runtimeBinding": "fogata",
+  "roomKind": "campfire",
+  "doorPolicy": "declared-sides-only",
+  "source": {
+    "file": "Cuartos Composicion.txt",
+    "grid": [
+      "·······r·······",
+      "·dxf·······fxd·",
+      "··xf·······fx··",
+      "··l····3····l··",
+      "r·····1c2·····r",
+      "r·············r",
+      "··xb···$···bx··",
+      "··xb·······bx··",
+      "·d···········d·",
+      "·······r·······"
+    ]
+  }
+}

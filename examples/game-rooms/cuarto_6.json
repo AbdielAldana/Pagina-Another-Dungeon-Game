@@ -1,0 +1,541 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "59714318-e837-5d23-bbf2-d9b23111f1f8",
+  "name": "Cuarto 6",
+  "description": "Convertido de Cuartos Composicion.txt",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room_campfire",
+  "backgroundOptions": [
+    "room_campfire",
+    "room2",
+    "room3"
+  ],
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "c87b89c0-b6f1-5ab3-a15a-3fa4e4d81208",
+      "assetId": "door",
+      "x": 112,
+      "y": 48,
+      "frame": 0,
+      "rotation": 270,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "up",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 0,
+        "col": 7
+      }
+    },
+    {
+      "id": "bcdd7afb-2f5f-5e61-a1fb-896b8f8716ad",
+      "assetId": "stone",
+      "x": 120,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 2,
+        "col": 7
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "2e9bdf2f-e74f-5432-afc0-9e9a906f59c4",
+      "assetId": "stone",
+      "x": 88,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 3,
+        "col": 5
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "9d1d8832-1ce2-539b-963a-e689e6d23658",
+      "assetId": "stone",
+      "x": 104,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 3,
+        "col": 6
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "dfb9089f-ebb2-5517-bc70-8a99bc5b1ada",
+      "assetId": "stone",
+      "x": 120,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 3,
+        "col": 7
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "0c9d5da5-2282-581a-844f-7a5e337be0f3",
+      "assetId": "stone",
+      "x": 136,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 3,
+        "col": 8
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "3f87f4d7-7cf7-5cbe-b5de-b505d73f5ae2",
+      "assetId": "stone",
+      "x": 152,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 3,
+        "col": 9
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "e8bd0021-61f7-5693-ac89-76df2356739d",
+      "assetId": "door",
+      "x": 8,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "left",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 4,
+        "col": 0
+      }
+    },
+    {
+      "id": "6cd487dc-e7e0-54da-acca-179f5d8d58d4",
+      "assetId": "stone",
+      "x": 104,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 4,
+        "col": 6
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "801ac7ba-da80-5fc8-bde6-1da6f5eca67f",
+      "assetId": "plant",
+      "x": 120,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "destination": "",
+      "sourceSymbol": "j",
+      "sourceCell": {
+        "row": 4,
+        "col": 7
+      },
+      "collisionProfile": "explicit",
+      "runtimeSlot": 0,
+      "spawnMode": "seeded",
+      "authoredAxis": "horizontal",
+      "behavior": "stationary-shooter"
+    },
+    {
+      "id": "eac33464-5e5d-5c26-ac17-d616090a343b",
+      "assetId": "stone",
+      "x": 136,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 4,
+        "col": 8
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "3d7d90a8-0449-5911-8dce-45f62da422c8",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 180,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 4,
+        "col": 14
+      }
+    },
+    {
+      "id": "b8294e99-587c-58ca-97dc-629d2223948e",
+      "assetId": "stone",
+      "x": 88,
+      "y": 128,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 5,
+        "col": 5
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "750c8750-beea-549b-a938-e63fa37dca3b",
+      "assetId": "stone",
+      "x": 104,
+      "y": 128,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 5,
+        "col": 6
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "356fb0d3-84c0-5fc5-94e1-00d21fa87b9e",
+      "assetId": "stone",
+      "x": 120,
+      "y": 128,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 5,
+        "col": 7
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "fc31fd75-d00c-5a45-bb79-c47df1fe1dbe",
+      "assetId": "stone",
+      "x": 136,
+      "y": 128,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 5,
+        "col": 8
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "de2f5f4f-8207-5494-8d20-d523f1fb6ffe",
+      "assetId": "stone",
+      "x": 152,
+      "y": 128,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 5,
+        "col": 9
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "32c99785-a97e-5ca0-b1c4-647c820d0a60",
+      "assetId": "stone",
+      "x": 120,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "p",
+      "sourceCell": {
+        "row": 6,
+        "col": 7
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "68b83d3d-4c59-5a38-8436-e241d33c57b8",
+      "assetId": "door",
+      "x": 112,
+      "y": 192,
+      "frame": 0,
+      "rotation": 90,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "down",
+      "rule": "possible",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "r",
+      "sourceCell": {
+        "row": 9,
+        "col": 7
+      }
+    }
+  ],
+  "markers": [
+    {
+      "id": "c4f88569-709a-5e8a-ab92-5c94a14f2fc1",
+      "type": "random",
+      "x": 64,
+      "y": 120,
+      "required": false,
+      "sourceSymbol": "Q",
+      "sourceCell": {
+        "row": 4,
+        "col": 3
+      }
+    },
+    {
+      "id": "a69a10ad-9204-5089-9d8c-84a753083bae",
+      "type": "random",
+      "x": 192,
+      "y": 120,
+      "required": false,
+      "sourceSymbol": "Q",
+      "sourceCell": {
+        "row": 4,
+        "col": 11
+      }
+    }
+  ],
+  "runtimeBinding": "cuarto_6",
+  "roomKind": "normal",
+  "doorPolicy": "declared-sides-only",
+  "source": {
+    "file": "Cuartos Composicion.txt",
+    "grid": [
+      "·······r·······",
+      "···············",
+      "·······p·······",
+      "·····ppppp·····",
+      "r··Q··pjp··Q··r",
+      "r····ppppp····r",
+      "·······p·······",
+      "···············",
+      "···············",
+      "·······r·······"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "anotherdungeon-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/editor.test.mjs tests/editor-ui.test.mjs tests/editor-rules.test.mjs tests/editor-game.test.mjs"
+  }
+}

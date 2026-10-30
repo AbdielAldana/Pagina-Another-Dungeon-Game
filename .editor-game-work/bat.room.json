@@ -1,0 +1,81 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "228d7b39-379e-4b45-be48-117baa27ad34",
+  "name": "Murcielago de prueba",
+  "description": "",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room2",
+  "backgroundCrop": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 256
+  },
+  "gameGrid": {
+    "x": 8,
+    "y": 48,
+    "cellSize": 16,
+    "columns": 15,
+    "rows": 10
+  },
+  "rules": {
+    "roomType": "standard",
+    "onlyTheseSides": false,
+    "allowedDoorSides": [
+      "left",
+      "right",
+      "up",
+      "down"
+    ],
+    "access": "normal"
+  },
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "fcb056cc-00e2-4458-ad5e-4eb32766e7dd",
+      "assetId": "box",
+      "x": 40,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "behavior": null
+    },
+    {
+      "id": "ae0377dc-ceca-4053-ae6c-c77926376d27",
+      "assetId": "bat",
+      "x": 80,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "behavior": null
+    }
+  ],
+  "markers": []
+}

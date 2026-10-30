@@ -1,0 +1,783 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "b4af4e18-90d3-5296-9ba1-7c4beb2f819d",
+  "name": "Inicio Menu",
+  "description": "Convertido de Cuartos Composicion.txt",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "menu_inicio",
+  "backgroundOptions": [
+    "menu_inicio"
+  ],
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "bb5fad8a-df08-566b-8f99-bf6368e1eece",
+      "assetId": "column",
+      "x": 24,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 0,
+        "col": 1
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "b8b72de6-2126-5a18-9dfc-a8e10ec1c28b",
+      "assetId": "library_front",
+      "x": 40,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "f",
+      "sourceCell": {
+        "row": 0,
+        "col": 2
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "87e01142-9ed1-5420-8710-09d89daabe7b",
+      "assetId": "library_front",
+      "x": 56,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "f",
+      "sourceCell": {
+        "row": 0,
+        "col": 3
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "173397b2-b8b7-5447-9ac0-91e732df4143",
+      "assetId": "library_front",
+      "x": 72,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "f",
+      "sourceCell": {
+        "row": 0,
+        "col": 4
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "f14e9428-9252-5238-8118-154985367ac8",
+      "assetId": "door",
+      "x": 112,
+      "y": 48,
+      "frame": 0,
+      "rotation": 270,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "up",
+      "rule": "required",
+      "destination": "",
+      "access": "normal",
+      "hiddenUntil": "",
+      "sourceSymbol": "R",
+      "sourceCell": {
+        "row": 0,
+        "col": 7
+      }
+    },
+    {
+      "id": "cb81ade7-d35c-524f-acd6-6c4f500be492",
+      "assetId": "column",
+      "x": 216,
+      "y": 48,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 0,
+        "col": 13
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "4baee451-028e-5738-84a3-c31eda1b976c",
+      "assetId": "sign",
+      "x": 88,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "t",
+      "sourceCell": {
+        "row": 1,
+        "col": 5
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "146aa70c-9d68-5f37-ad99-704f31a96285",
+      "assetId": "weapon_table",
+      "x": 184,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 26,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "w",
+      "sourceCell": {
+        "row": 1,
+        "col": 11
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "9a47c1cb-303c-5992-bbec-89c5486e5d78",
+      "assetId": "vase",
+      "x": 24,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "v",
+      "sourceCell": {
+        "row": 2,
+        "col": 1
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "094a571c-508c-5089-b042-c2b6e176308f",
+      "assetId": "chair",
+      "x": 56,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 2,
+        "col": 3
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "55e50be3-df86-5a3d-8e4e-703347ec6bf2",
+      "assetId": "chair",
+      "x": 72,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 2,
+        "col": 4
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "eddb380d-0686-5789-b0c3-f5528e4a1886",
+      "assetId": "axe",
+      "x": 168,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "z",
+      "sourceCell": {
+        "row": 2,
+        "col": 10
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "b7871cf8-0731-5b38-80e2-8c93534bced3",
+      "assetId": "chest",
+      "x": 216,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "g",
+      "sourceCell": {
+        "row": 2,
+        "col": 13
+      },
+      "collisionProfile": "explicit",
+      "behavior": "proximity-chest",
+      "animation": {
+        "idleFrame": 0,
+        "transitionFrame": 1,
+        "nearFrame": 2,
+        "stepFrames": 8,
+        "openRadius": 32,
+        "closeRadius": 40
+      }
+    },
+    {
+      "id": "cc1be766-715b-5d7a-9740-62200967af10",
+      "assetId": "chair",
+      "x": 40,
+      "y": 96,
+      "frame": 3,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 3,
+        "col": 2
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "f4fe222f-7afa-5282-9fab-c2caa026bda5",
+      "assetId": "table",
+      "x": 56,
+      "y": 96,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 26,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "n",
+      "sourceCell": {
+        "row": 3,
+        "col": 3
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "e33263c1-c6ee-5528-b009-6bbdaf2b874d",
+      "assetId": "chair",
+      "x": 88,
+      "y": 96,
+      "frame": 2,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 3,
+        "col": 5
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "61a52cd8-9f83-5677-a1d4-cef88a1a88fa",
+      "assetId": "door",
+      "x": 8,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "left",
+      "rule": "required",
+      "destination": "",
+      "access": "closed",
+      "hiddenUntil": "",
+      "sourceSymbol": "R",
+      "sourceCell": {
+        "row": 4,
+        "col": 0
+      }
+    },
+    {
+      "id": "b45f86f4-fdda-58fe-9758-63fbafecb990",
+      "assetId": "chair",
+      "x": 56,
+      "y": 112,
+      "frame": 1,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 4,
+        "col": 3
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "ef0d9557-de9b-5fa9-b4a1-64c674b78dcb",
+      "assetId": "chair",
+      "x": 72,
+      "y": 112,
+      "frame": 1,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "i",
+      "sourceCell": {
+        "row": 4,
+        "col": 4
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "9b5a423d-4a67-5238-a924-09d4ae700af0",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 180,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "required",
+      "destination": "",
+      "access": "closed",
+      "hiddenUntil": "",
+      "sourceSymbol": "R",
+      "sourceCell": {
+        "row": 4,
+        "col": 14
+      }
+    },
+    {
+      "id": "2aeb9536-fa2e-50bc-8a63-0116ac577428",
+      "assetId": "column",
+      "x": 24,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 7,
+        "col": 1
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "a8a819f0-7b5f-5119-b50c-1d0c3f3a662e",
+      "assetId": "library_back",
+      "x": 40,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 2
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "6f14846e-e455-55ab-8df4-3488264162be",
+      "assetId": "library_back",
+      "x": 56,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 3
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "29ae1f7c-a85d-5400-a49d-f07406cae95a",
+      "assetId": "library_back",
+      "x": 72,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 4
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "b799a72e-1b66-5734-8ee1-b82dc92707f0",
+      "assetId": "library_back",
+      "x": 168,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 10
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "4c05ffa0-d7cf-51c3-9962-19910b786188",
+      "assetId": "library_back",
+      "x": 184,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 11
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "d13abe05-4ba5-50df-a3c7-fa3d066fb582",
+      "assetId": "library_back",
+      "x": 200,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "b",
+      "sourceCell": {
+        "row": 7,
+        "col": 12
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "b75dd544-903d-55f8-b237-75ede19718e6",
+      "assetId": "column",
+      "x": 216,
+      "y": 160,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 7,
+        "col": 13
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "7ea7b910-1876-5f34-924c-eb5bc0302862",
+      "assetId": "vase",
+      "x": 152,
+      "y": 176,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "v",
+      "sourceCell": {
+        "row": 8,
+        "col": 9
+      },
+      "collisionProfile": "explicit"
+    },
+    {
+      "id": "ceefc99d-43e2-58a6-8cc5-3bce5fbe48a3",
+      "assetId": "door",
+      "x": 112,
+      "y": 192,
+      "frame": 0,
+      "rotation": 90,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "down",
+      "rule": "required",
+      "destination": "",
+      "access": "closed",
+      "hiddenUntil": "",
+      "sourceSymbol": "R",
+      "sourceCell": {
+        "row": 9,
+        "col": 7
+      }
+    }
+  ],
+  "markers": [],
+  "runtimeBinding": "inicio_menu",
+  "roomKind": "menu",
+  "doorPolicy": "declared-sides-only",
+  "source": {
+    "file": "Cuartos Composicion.txt",
+    "grid": [
+      "·xfff··R·····x·",
+      "·xffft·····wwx·",
+      "·v·ii·····z··g·",
+      "··inni·········",
+      "R··ii·········R",
+      "R·············R",
+      "···············",
+      "·xbbb·····bbbx·",
+      "·xbbb····vbbbx·",
+      "·······R·······"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "example-boss1-v2",
+  "name": "Boss 1",
+  "description": "Solo puerta derecha obligatoria. Puede colocarse a la izquierda de otro cuarto. Acceso por tres palancas.",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "boss_1",
+  "backgroundCrop": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 256
+  },
+  "gameGrid": {
+    "x": 8,
+    "y": 48,
+    "cellSize": 16,
+    "columns": 15,
+    "rows": 10
+  },
+  "rules": {
+    "roomType": "boss1",
+    "onlyTheseSides": true,
+    "allowedDoorSides": [
+      "right"
+    ],
+    "access": "three_levers"
+  },
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [],
+  "objects": [
+    {
+      "id": "boss1-door-right",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 24,
+        "width": 16,
+        "height": 8
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "required",
+      "behavior": null
+    }
+  ],
+  "markers": []
+}

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#343723">
+  <meta name="description" content="Construye habitaciones para AnotherDungeon con los sprites del juego. Guarda, importa y comparte tus diseños.">
+  <title>AnotherDungeon — Taller de cuartos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="editor.css?v=20261030-3">
+  <script defer src="editor-loader.js?v=20261031-3"></script>
+</head>
+<body>
+  <header class="editor-header">
+    <a class="brand" href="index.html"><span aria-hidden="true">✳</span> AnotherDungeon</a>
+    <nav aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="game.html">Jugar ↗</a><a href="editor.html" aria-current="page">Taller de cuartos</a></nav>
+    <button class="quiet help-trigger" id="help-button" title="Ayuda y atajos">? <span>Guía rápida</span></button>
+  </header>
+
+  <main>
+    <section class="project-bar" aria-label="Proyecto actual">
+      <div class="project-identity"><p class="eyebrow">EL TALLER DE LA MAZMORRA</p><div class="project-title"><h1>Taller de cuartos<span>.</span></h1><span class="alpha-tag">BETA</span></div></div>
+      <div class="project-actions"><button id="new-button" class="quiet">＋ Nuevo</button><button id="library-button" class="quiet">Mis cuartos <span id="library-count" class="count">0</span></button><button id="save-button" class="secondary">Guardar</button><label class="export-kind">Archivo <select id="export-target" aria-label="Destino de la exportación"><option value="game">Para el juego</option><option value="editor">Borrador del editor</option></select></label><button id="export-button" class="primary">Exportar cuarto <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <div class="load-banner" id="load-banner" role="status">Cargando los recursos del juego…</div>
+
+    <div class="workspace">
+      <aside id="palette-panel" class="panel palette-panel" aria-labelledby="palette-heading">
+        <div class="panel-heading"><h2 id="palette-heading">Recursos</h2><span id="asset-count" class="meta">— SPRITES</span><button class="sheet-close secondary" id="resources-close">Listo ✕</button></div>
+        <div class="palette-tabs" role="group" aria-label="Tipo de recurso"><button id="objects-tab" aria-pressed="true">Objetos</button><button id="terrain-tab" aria-pressed="false">Terreno</button></div>
+        <div class="logical-markers"><p>Marcadores del generador</p><button id="add-marker-q" class="secondary">Q · Aparición</button><button id="add-marker-reward" class="secondary">&amp; · Habilidad</button><small>Solo posiciones candidatas; el juego decide su contenido.</small></div>
+        <div id="objects-palette">
+          <label class="search-field"><span aria-hidden="true">⌕</span><input id="asset-search" type="search" placeholder="Buscar un sprite…" aria-label="Buscar sprites"></label>
+          <label class="sr-only" for="asset-category">Categoría</label><select id="asset-category"><option value="all">Todos los objetos</option value="props">Muebles y decoración</option><option value="doors">Puertas y escaleras</option><option value="items">Objetos y pociones</option><option value="enemies">Enemigos</option><option value="hazards">Trampas y proyectiles</option><option value="actors">Personajes</option></select>
+          <div id="sprite-grid" class="sprite-grid" aria-label="Catálogo de sprites"></div>
+          <p class="palette-note">Selecciona un sprite y toca el cuarto para colocarlo. Con mouse también puedes arrastrarlo.</p>
+        </div>
+        <div id="terrain-palette" hidden>
+          <label for="tile-source">Hoja de terreno</label><select id="tile-source"></select>
+          <p class="small-copy">Elige un tile de 16 × 16 px y pinta sobre el cuarto. Usa «Quitar» para recuperar el fondo.</p>
+          <canvas id="tile-picker" width="256" height="256" tabindex="0" aria-label="Hoja de tiles. Usa las flechas para elegir un tile y pulsa Enter para activar el pincel."></canvas>
+          <div class="tile-selection"><canvas id="tile-preview" width="16" height="16"></canvas><span id="tile-coordinates">Tile 0, 0</span></div>
+        </div>
+      </aside>
+
+      <section class="stage-panel" aria-label="Editor de la habitación">
+        <div class="stage-topline"><span class="stage-label"><span class="status-dot"></span> LIENZO DEL CUARTO</span><span id="save-status" role="status">Borrador local</span></div>
+        <div class="toolbar" role="toolbar" aria-label="Herramientas del editor">
+          <div class="tool-group drawing-tools">
+            <button data-tool="select" aria-label="Seleccionar y mover (V)" title="Seleccionar y mover · V" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v16l5-5 4 7 3-2-4-7h7z"/></svg></button>
+            <button data-tool="stamp" aria-label="Colocar sprite (B)" title="Colocar sprite · B" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6l3 4v3H6v-3l3-4zM5 20h14"/></svg></button>
+            <button data-tool="erase" aria-label="Borrar objeto o tile (E)" title="Borrar objeto o tile · E" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 15 10-11 7 7-9 10H9zM11 8l7 7M12 21h9"/></svg></button>
+            <span class="tool-divider"></span>
+            <button data-tool="collision" aria-label="Pintar colisión (C)" title="Dibujar un rectángulo invisible (%) · C." aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg></button>
+            <button data-tool="spawn" aria-label="Referencia de inicio opcional (P)" title="Referencia de inicio opcional · P" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="6"/></svg></button>
+            <button data-tool="pan" aria-label="Desplazar la vista" title="Desplazar la vista"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></button>
+          </div>
+          <div class="tool-group view-tools"><button id="undo-button" title="Deshacer · Ctrl+Z" aria-label="Deshacer" disabled>↶</button><button id="redo-button" title="Rehacer · Ctrl+Shift+Z" aria-label="Rehacer" disabled>↷</button><span class="tool-divider"></span><button id="grid-button" title="Mostrar cuadrícula · G" aria-label="Mostrar cuadrícula" aria-pressed="true">▦</button><button id="collision-view-button" title="Mostrar colisiones" aria-label="Mostrar colisiones" aria-pressed="false">▧</button></div>
+          <div class="zoom-controls"><button id="zoom-out" aria-label="Reducir zoom">−</button><button id="fit-button" title="Ajustar cuarto a la pantalla" aria-label="Ajustar cuarto a la pantalla"><output id="zoom-value">200%</output></button><button id="zoom-in" aria-label="Aumentar zoom">＋</button></div>
+        </div>
+        <div id="paint-options" class="paint-options" role="group" aria-label="Modo del pincel" hidden><button id="paint-add" aria-pressed="true">＋ Dibujar</button><button id="paint-remove" aria-pressed="false">− Quitar</button><span id="paint-kind">Colisión invisible = %</span></div>
+        <div class="canvas-viewport" id="canvas-viewport"><div class="canvas-wrap" id="canvas-wrap"><canvas id="room-canvas" width="768" height="768" tabindex="0" aria-label="Vista del cuarto de 240 por 160 píxeles. Coordenadas del lienzo original de 256 por 256, desde 8, 48. Selecciona un recurso y toca para colocarlo."></canvas><div class="canvas-loading" id="canvas-loading">Preparando el taller…</div></div></div>
+        <div class="canvas-footer"><span id="coordinates">X — &nbsp; Y —</span><span>VISTA 240 × 160 <span class="footer-separator">/</span> <label for="snap-size">AJUSTE</label> <select id="snap-size"><option value="free" selected>Libre · 1 px</option><option value="game">Juego · 16 px (8,48)</option><option value="8">8 px</option></select></span></div>
+        <div id="touch-selection" class="touch-selection" hidden><span id="touch-selection-name"></span><div><button id="touch-rotate" aria-label="Girar selección">↻ Girar</button><button id="touch-duplicate">Duplicar</button><button id="touch-delete" class="danger">Quitar</button><button id="touch-edit" class="secondary">Ajustar</button></div></div>
+        <div class="tool-hint"><span class="hint-icon" aria-hidden="true">✦</span><p id="tool-hint">Arrastra recursos desde el catálogo para darle vida a este cuarto.</p><button id="preview-button" class="quiet">Vista limpia</button></div>
+      </section>
+
+      <aside id="inspector-panel" class="panel inspector-panel" aria-label="Propiedades del cuarto y del objeto">
+        <div class="panel-heading"><h2 id="inspector-heading">El cuarto</h2><span class="meta">01 / DISEÑO</span><button class="sheet-close secondary" id="properties-close">Listo ✕</button></div>
+        <div class="inspector-content">
+          <label for="room-name">Nombre</label><input id="room-name" maxlength="80" placeholder="Nombre de tu cuarto">
+          <label for="background-select">Fondo</label><select id="background-select"></select>
+          <label for="room-description">Notas del diseño</label><textarea id="room-description" rows="2" maxlength="1000" placeholder="¿Qué debería pasar aquí?"></textarea>
+          <div class="spawn-row"><span><span class="spawn-icon">✚</span> Referencia de inicio <small id="spawn-coordinates">Entrada por puerta</small></span><div><button id="edit-spawn-button" class="inline-button">Colocar</button><button id="remove-spawn-button" class="inline-button" hidden>Quitar</button></div></div><p class="field-caption">Opcional. El juego coloca al jugador según la puerta por la que entra.</p>
+          <div class="display-options"><label class="check-row"><input id="grid-toggle" type="checkbox" checked> Ver cuadrícula</label><label class="check-row"><input id="collisions-toggle" type="checkbox"> Ver colisiones</label></div>
+        </div>
+        <details class="rules-section" open><summary>Reglas del generador</summary><div class="inspector-content">
+          <label for="game-template">Plantillas del juego</label><select id="game-template"></select><button id="open-game-template" class="secondary full-button">Abrir plantilla</button>
+          <div id="native-room-fields" hidden><p class="field-caption">Perfil: <strong id="runtime-profile"></strong>. Este archivo sustituye el mismo perfil del juego y conserva su función.</p><p class="field-caption">Fondos posibles según la semilla</p><div class="side-choices"><label class="check-row"><input id="background-option-room2" type="checkbox"> Ruinas</label><label class="check-row"><input id="background-option-room3" type="checkbox"> Piedra</label><label class="check-row"><input id="background-option-room_campfire" type="checkbox"> Refugio</label><label class="check-row"><input id="background-option-land" type="checkbox"> Limpio</label><label class="check-row"><input id="background-option-room_tutorial" type="checkbox"> Tutorial</label><label class="check-row"><input id="background-option-boss_1" type="checkbox"> Boss 1</label><label class="check-row"><input id="background-option-menu_inicio" type="checkbox"> Menú</label></div></div>
+          <label for="room-type">Tipo de cuarto</label><select id="room-type"><option value="standard">Normal</option><option value="boss">Boss</option></select>
+          <button id="boss-preset" class="secondary full-button">Marcar como Boss</button><p class="field-caption">Conserva el diseño, las puertas y el acceso para editarlos libremente. Se exporta como borrador hasta integrar jefes nuevos al juego. La plantilla original Boss 1 se abre por separado arriba.</p>
+          <label for="room-access">Condición de acceso</label><select id="room-access"><option value="normal">Normal</option><option value="key">Llave</option><option value="three_levers">Tres palancas · sin llave</option></select>
+          <label class="check-row"><input id="only-door-sides" type="checkbox"> Solo estos lados para puertas</label>
+          <div class="side-choices"><label class="check-row"><input id="side-left" type="checkbox" checked> Izquierda</label><label class="check-row"><input id="side-right" type="checkbox" checked> Derecha</label><label class="check-row"><input id="side-up" type="checkbox" checked> Arriba</label><label class="check-row"><input id="side-down" type="checkbox" checked> Abajo</label></div>
+          <p class="field-caption">Los destinos se resuelven con la semilla. Las puertas de otros lados quedan prohibidas al activar esta opción.</p>
+        </div></details>
+        <div class="panel-heading object-heading"><h2>Selección</h2><span id="selection-size" class="meta">—</span></div>
+        <div id="empty-selection" class="empty-selection"><span aria-hidden="true">⌖</span><p>Cada detalle cuenta.</p><small>Selecciona un objeto del cuarto para ajustar sus propiedades.</small></div>
+        <div id="object-properties" class="inspector-content" hidden>
+          <div class="selected-name"><canvas id="selected-preview" width="32" height="32"></canvas><strong id="selected-name"></strong></div>
+          <div class="field-row"><label>X <input id="object-x" type="number" min="0" max="255"></label><label>Y <input id="object-y" type="number" min="0" max="255"></label></div>
+          <label for="object-frame">Cuadro / orientación</label><select id="object-frame"></select>
+          <div class="object-actions"><button id="rotate-button" class="secondary" title="Girar 90 grados · R">↻ Girar</button><button id="flip-button" class="secondary" aria-pressed="false">↔ Reflejar</button></div>
+          <label for="object-role">Función en el cuarto</label><select id="object-role"><option value="interactive">Interacción del juego</option><option value="lever">Palanca del juego</option><option value="decoration">Decoración</option><option value="enemy">Enemigo</option><option value="item">Objeto recogible</option><option value="door">Puerta</option><option value="stairs">Escaleras</option><option value="npc">NPC</option><option value="hazard">Trampa</option></select>
+          <div id="door-fields" hidden><label for="door-side">Lado de la puerta</label><select id="door-side"><option value="">Selecciona un lado</option><option value="left">Izquierda</option><option value="right">Derecha</option><option value="up">Arriba</option><option value="down">Abajo</option></select><label for="door-rule">Regla de puerta</label><select id="door-rule"><option value="">Selecciona una regla</option><option value="possible">r · Posible</option><option value="required">R · Obligatoria</option></select><p class="field-caption">Sin destino concreto: lo decide el generador.</p></div>
+          <div id="enemy-fields" hidden><label for="enemy-spawn">Aparición del enemigo</label><select id="enemy-spawn"><option value="fixed">Fija</option><option value="seeded">Decidida por la semilla</option></select><label for="enemy-patrol">Movimiento</label><select id="enemy-patrol"><option value="none">Sin patrulla definida</option><option value="horizontal">Patrulla horizontal</option><option value="vertical">Patrulla vertical</option></select><div id="patrol-fields" hidden><div class="field-row"><label>Extremo inicial <input id="patrol-from" type="number" min="0" max="255" placeholder="px"></label><label>Extremo final <input id="patrol-to" type="number" min="0" max="255" placeholder="px"></label></div><p class="field-caption">Extremos de la esquina superior izquierda, después del giro. No se deducen del frame.</p></div></div>
+          <div id="native-object-fields" hidden><label for="object-collision-profile">Colisión del objeto</label><select id="object-collision-profile"><option value="explicit">Usar la caja dibujada</option><option value="legacy-base">Conservar base de columna / librero</option></select><label id="enemy-slot-label">Slot del candidato enemigo <input id="enemy-slot" type="number" min="0" max="3"></label></div>
+          <label id="hazard-active-label" class="check-row"><input id="hazard-active" type="checkbox"> Pinchos siempre activos (D)</label>
+          <label for="object-behavior">Comportamiento durante el juego</label><select id="object-behavior"><option value="none">Sin comportamiento definido</option><option value="chest">Cofre · apertura por cercanía</option><option value="lever">Palanca · permanece visible</option></select><div id="behavior-preview" hidden><p id="behavior-note" class="field-caption"></p><div class="behavior-states"><button data-preview-frame="0">0</button><button data-preview-frame="1">1</button><button data-preview-frame="2">2</button></div></div>
+          <label class="check-row"><input id="object-solid" type="checkbox"> Bloquea el paso</label>
+          <button id="apply-default-hitbox" class="secondary full-button">Aplicar colisión recomendada</button><p class="field-caption">Los archivos importados conservan su caja. En 16×16: x=3, y=0, 10×8. Los asientos no bloquean.</p>
+          <div id="hitbox-fields" hidden><p class="field-caption">Colisión local, antes de girar</p><div class="field-row"><label>X <input id="hitbox-x" type="number" min="0"></label><label>Y <input id="hitbox-y" type="number" min="0"></label></div><div class="field-row"><label>Ancho <input id="hitbox-width" type="number" min="1"></label><label>Alto <input id="hitbox-height" type="number" min="1"></label></div></div>
+          <div class="object-actions"><button id="duplicate-button" class="secondary">Duplicar</button><button id="delete-button" class="danger">Eliminar</button></div>
+        </div>
+        <div class="panel-heading object-heading"><h2>Objetos del cuarto</h2><span id="object-count" class="count">0</span></div>
+        <div class="layer-actions"><span>El primero se dibuja encima.</span><button id="layer-up" class="inline-button" title="Traer al frente" aria-label="Traer al frente">↑</button><button id="layer-down" class="inline-button" title="Enviar al fondo" aria-label="Enviar al fondo">↓</button></div>
+        <div id="object-list" class="object-list"><p class="empty-list">Tu cuarto está listo para empezar.</p></div>
+        <details class="rules-section" open><summary>Marcadores Q / &amp; / NPC</summary><div class="inspector-content"><button id="add-marker-npc" class="secondary full-button" hidden>Añadir posición de aventurero</button><label for="marker-select">Marcador</label><select id="marker-select"><option value="">Sin selección</option></select><div id="marker-fields" hidden><div class="field-row"><label>X <input id="marker-x" type="number" min="0" max="255"></label><label>Y <input id="marker-y" type="number" min="0" max="255"></label></div><label id="marker-slot-label" hidden>Posición de entrega <input id="marker-slot" type="number" min="0" max="2"></label><label class="check-row" id="marker-required-label"><input id="marker-required" type="checkbox"> Recompensa obligatoria</label><button id="delete-marker" class="danger full-button">Quitar marcador</button></div></div></details>
+        <details class="rules-section"><summary>Colisiones invisibles (%)</summary><div class="inspector-content"><button id="draw-collision" class="secondary full-button">Dibujar rectángulo</button><label for="collision-select">Rectángulo</label><select id="collision-select"><option value="">Sin selección</option></select><div id="collision-fields" hidden><div class="field-row"><label>X <input id="collision-x" type="number" min="0"></label><label>Y <input id="collision-y" type="number" min="0"></label></div><div class="field-row"><label>Ancho <input id="collision-width" type="number" min="1"></label><label>Alto <input id="collision-height" type="number" min="1"></label></div><button id="delete-collision" class="danger full-button">Quitar rectángulo</button></div><p class="field-caption">No crea un objeto ni un sprite.</p></div></details>
+        <div id="rules-errors" class="rules-errors" role="status"></div>
+      </aside>
+    </div>
+    <footer class="editor-footer"><span>EXPLORA. CONSTRUYE. COMPARTE.</span><span>Guardado en este navegador <span aria-hidden="true">·</span> Exporta una copia para compartir</span></footer>
+  </main>
+
+  <nav class="mobile-dock" aria-label="Paneles del taller"><button id="mobile-resources" aria-haspopup="dialog" aria-controls="resources-dialog">＋ <span>Recursos</span></button><button id="mobile-properties" aria-haspopup="dialog" aria-controls="properties-dialog">☷ <span>Cuarto y objetos</span></button></nav>
+  <dialog id="resources-dialog" class="mobile-sheet" aria-labelledby="palette-heading"></dialog>
+  <dialog id="properties-dialog" class="mobile-sheet" aria-labelledby="inspector-heading"></dialog>
+
+  <dialog id="library-dialog" aria-labelledby="library-title"><div class="dialog-heading"><div><p class="eyebrow">TU COLECCIÓN LOCAL</p><h2 id="library-title">Mis cuartos</h2></div><button class="dialog-close quiet" aria-label="Cerrar">✕</button></div><p class="small-copy">Estos cuartos se guardan en este navegador. Descarga sus archivos JSON para conservar una copia fuera de aquí.</p><div id="saved-rooms" class="saved-rooms"></div><div class="dialog-footer"><button id="import-button" class="secondary">↑ Importar JSON</button><button id="paste-button" class="quiet">Pegar código</button></div></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-heading"><div><p class="eyebrow">DEL TALLER A LA MAZMORRA</p><h2 id="export-title">Comparte tu cuarto</h2></div><button class="dialog-close quiet" aria-label="Cerrar">✕</button></div><p class="small-copy">Descarga el JSON o copia el código para pasárselo a quien integra el juego. Incluye sprites, posiciones, tiles, colisiones y reglas de juego.</p><div id="export-warnings" class="export-warnings"></div><label for="export-code" class="sr-only">Código JSON del cuarto</label><textarea id="export-code" readonly spellcheck="false" rows="10"></textarea><p class="integration-note">Este archivo describe el cuarto. Los perfiles originales se conservan al exportar. Coloca el JSON en rooms/ para que el importador del juego lo procese al compilar.</p><div class="dialog-footer"><button id="copy-button" class="secondary">Copiar código</button><button id="png-button" class="quiet">↓ Imagen PNG</button><button id="download-button" class="primary">↓ Descargar JSON</button></div></dialog>
+  <dialog id="paste-dialog" aria-labelledby="paste-title"><div class="dialog-heading"><h2 id="paste-title">Importar código</h2><button class="dialog-close quiet" aria-label="Cerrar">✕</button></div><label for="import-code">Pega un cuarto exportado por este editor</label><textarea id="import-code" rows="12" spellcheck="false" placeholder='{"format":"anotherdungeon-room", …}'></textarea><p id="import-error" class="form-error" role="alert"></p><div class="dialog-footer"><button id="import-code-button" class="primary">Abrir cuarto</button></div></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="dialog-heading"><div><p class="eyebrow">UNA HABITACIÓN. INFINITAS POSIBILIDADES.</p><h2 id="help-title">Tu primer cuarto</h2></div><button class="dialog-close quiet" aria-label="Cerrar">✕</button></div><ol class="help-steps"><li><strong>Elige la base.</strong> Cambia el fondo desde «El cuarto» o pinta tiles en «Terreno».</li><li><strong>Dale vida.</strong> Arrastra sprites desde el catálogo. También puedes seleccionarlos y tocar el lienzo.</li><li><strong>Define el paso.</strong> Marca objetos sólidos o pinta colisiones. El clic derecho borra tiles o colisiones con su herramienta activa.</li><li><strong>Conecta la aventura.</strong> Coloca puertas y escaleras. Define el lado y la regla r/R, sin destino concreto. El juego elige la aparición según la puerta de entrada.</li><li><strong>Guarda y comparte.</strong> «Guardar» conserva una copia local. «Exportar cuarto» genera el JSON para integrar después.</li></ol><dl class="shortcut-list"><dt>V / B / E</dt><dd>Seleccionar / colocar / borrar</dd><dt>C / P / G</dt><dd>Colisión / referencia de inicio / cuadrícula</dd><dt>R / Supr</dt><dd>Girar / eliminar selección</dd><dt>Ctrl + D</dt><dd>Duplicar selección</dd><dt>Ctrl + Z / Ctrl + Shift + Z</dt><dd>Deshacer / rehacer</dd><dt>Flechas / Shift + flechas</dt><dd>Mover 1 px / mover según ajuste</dd><dt>Ctrl + S</dt><dd>Guardar cuarto</dd></dl><p class="small-copy">El lienzo conserva los 256 × 256 px del BMP. La cuadrícula del juego tiene origen 8,48 y 15 × 10 celdas de 16 px. Las coordenadas parten de la esquina superior izquierda del lienzo. Los rectángulos rojos solo muestran colisiones definidas en el editor; las paredes del fondo deben marcarse si bloquean el paso.</p></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-heading"><h2 id="confirm-title">Crear otro cuarto</h2><button class="dialog-close quiet" aria-label="Cancelar">✕</button></div><p id="confirm-message" class="small-copy"></p><div class="dialog-footer"><button id="confirm-cancel" class="secondary">Cancelar</button><button id="confirm-action" class="primary">Continuar</button></div></dialog>
+  <input type="file" id="import-file" accept=".json,application/json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('load-banner').textContent = 'Abre esta página con Live Server de VS Code o un servidor local para cargar los recursos del editor.';
+      document.getElementById('load-banner').classList.add('error');
+      document.getElementById('canvas-loading').textContent = 'Abre el editor desde un servidor local.';
+    }
+  </script>
+</body>
+</html>

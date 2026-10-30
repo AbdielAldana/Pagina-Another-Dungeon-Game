@@ -1,0 +1,263 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "4f73f010-446a-52e4-93e8-bd67ceab0559",
+  "name": "Boss 1 Ant",
+  "description": "Convertido de Cuartos Composicion.txt",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "boss_1",
+  "backgroundOptions": [
+    "boss_1"
+  ],
+  "spawn": {
+    "x": 128,
+    "y": 128
+  },
+  "tiles": [],
+  "collisions": [
+    {
+      "id": "d3f3a60c-0830-50bf-8d76-771369fdc4fd",
+      "x": 88,
+      "y": 64,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 1,
+        "col": 5
+      }
+    },
+    {
+      "id": "05b477ea-d780-5fff-a364-07936cf8bfb8",
+      "x": 88,
+      "y": 80,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 2,
+        "col": 5
+      }
+    },
+    {
+      "id": "34aa7b55-264e-5dc4-b488-a437e0355692",
+      "x": 88,
+      "y": 96,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 3,
+        "col": 5
+      }
+    },
+    {
+      "id": "2bc4caca-9eba-55b9-b99f-e3a0bbb04494",
+      "x": 88,
+      "y": 112,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 4,
+        "col": 5
+      }
+    },
+    {
+      "id": "0a559f28-3709-5115-95f9-2847ebe11704",
+      "x": 88,
+      "y": 128,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 5,
+        "col": 5
+      }
+    },
+    {
+      "id": "141f69ec-eec9-501b-9d3f-a3afc9d4efda",
+      "x": 88,
+      "y": 144,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 6,
+        "col": 5
+      }
+    },
+    {
+      "id": "df436b88-ba3f-544e-a74f-a6243144b218",
+      "x": 88,
+      "y": 160,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 7,
+        "col": 5
+      }
+    },
+    {
+      "id": "5429a75e-ca60-5553-9079-4dc38a0eb228",
+      "x": 88,
+      "y": 176,
+      "width": 16,
+      "height": 16,
+      "sourceCell": {
+        "row": 8,
+        "col": 5
+      }
+    }
+  ],
+  "objects": [
+    {
+      "id": "6ac69255-574e-5148-87c3-3104c26ded99",
+      "assetId": "column",
+      "x": 200,
+      "y": 64,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 1,
+        "col": 12
+      },
+      "collisionProfile": "legacy-base"
+    },
+    {
+      "id": "f672d26f-60b8-5cc0-85b5-1a63b75412aa",
+      "assetId": "door",
+      "x": 232,
+      "y": 112,
+      "frame": 0,
+      "rotation": 180,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "role": "door",
+      "side": "right",
+      "rule": "required",
+      "destination": "",
+      "access": "three-levers",
+      "hiddenUntil": "three-levers",
+      "sourceSymbol": "R",
+      "sourceCell": {
+        "row": 4,
+        "col": 14
+      }
+    },
+    {
+      "id": "97a61507-9497-5125-b028-f1a08eb9664f",
+      "assetId": "column",
+      "x": 200,
+      "y": 144,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 5,
+        "y": 16,
+        "width": 6,
+        "height": 8
+      },
+      "role": "decoration",
+      "destination": "",
+      "sourceSymbol": "x",
+      "sourceCell": {
+        "row": 6,
+        "col": 12
+      },
+      "collisionProfile": "legacy-base"
+    }
+  ],
+  "markers": [
+    {
+      "id": "3f4d84f0-c07e-5cf9-b618-f34747dbe830",
+      "type": "random",
+      "x": 128,
+      "y": 104,
+      "required": true,
+      "sourceSymbol": "Q",
+      "sourceCell": {
+        "row": 3,
+        "col": 7
+      }
+    },
+    {
+      "id": "c82b6c56-2fd2-5e30-b8da-820a3b9c3815",
+      "type": "ability",
+      "x": 128,
+      "y": 120,
+      "required": true,
+      "sourceSymbol": "&",
+      "sourceCell": {
+        "row": 4,
+        "col": 7
+      }
+    },
+    {
+      "id": "0d195a12-719b-58a0-a179-6c13bafb00a6",
+      "type": "random",
+      "x": 128,
+      "y": 136,
+      "required": true,
+      "sourceSymbol": "Q",
+      "sourceCell": {
+        "row": 5,
+        "col": 7
+      }
+    },
+    {
+      "id": "f0b18666-5fa7-578d-9d4c-b9b6c9d38a6a",
+      "type": "random",
+      "x": 128,
+      "y": 152,
+      "required": true,
+      "sourceSymbol": "Q",
+      "sourceCell": {
+        "row": 6,
+        "col": 7
+      }
+    }
+  ],
+  "runtimeBinding": "boss_1_ant",
+  "roomKind": "reward",
+  "doorPolicy": "declared-sides-only",
+  "source": {
+    "file": "Cuartos Composicion.txt",
+    "grid": [
+      "···············",
+      "·····%······x··",
+      "·····%······x··",
+      "·····%·Q·······",
+      "·····%·&······R",
+      "·····%·Q······R",
+      "·····%·Q····x··",
+      "·····%······x··",
+      "·····%·········",
+      "···············"
+    ]
+  },
+  "placement": {
+    "relativeToExistingRoom": "left",
+    "entrySide": "right"
+  },
+  "access": {
+    "type": "three-levers",
+    "requiresKey": false
+  }
+}

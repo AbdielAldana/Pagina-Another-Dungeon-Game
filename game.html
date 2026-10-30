@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17131b">
+  <title>AnotherDungeon — Jugar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pixel.css">
+  <style>
+    html,body{width:100%;height:100%;margin:0;background:#100d13}body{height:100vh;height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column}.gamebar{height:68px;flex:none;padding:0 clamp(16px,5vw,70px);display:flex;align-items:center;justify-content:space-between;background:#17131b;border-bottom:1px solid rgba(241,230,213,.15)}.gamebar-back{color:#c6bbc8;font-size:12px}.gamebar-back span{color:#e1a957;margin-right:8px}.gamebar-title{font:500 11px 'Unbounded',Arial,sans-serif;letter-spacing:.08em}.gamebar-title i{color:#e1a957;font-style:normal}.gamebar-tip{font-size:9px;letter-spacing:.12em;color:#9e929f}.game-wrap{flex:1;min-height:0;padding:clamp(12px,2vw,24px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.screen{width:min(100%,1440px);height:100%;flex:1;min-height:0;background:#08070a;border:1px solid rgba(225,169,87,.28);box-shadow:0 12px 44px rgba(0,0,0,.38);overflow:hidden;position:relative}#game{width:100%;height:100%}#game canvas{max-width:100%;max-height:100%;object-fit:contain}.game-status{display:flex;flex:none;justify-content:space-between;width:min(100%,1440px);font-size:9px;letter-spacing:.1em;color:#958a99}.game-status span:first-child:before{content:'';display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:#e1a957;box-shadow:0 0 9px #e1a957}.game-footer{padding:0 clamp(16px,5vw,70px);height:48px;flex:none;border-top:1px solid rgba(241,230,213,.1);display:flex;justify-content:center;align-items:center;color:#766d79;font-size:8px;letter-spacing:.12em;text-align:center}@media(max-width:600px){.gamebar{height:58px;padding:0 14px}.gamebar-title{font-size:8px}.gamebar-tip{display:none}.game-wrap{padding:10px;justify-content:flex-start;padding-top:12px}.screen{width:100%;height:auto;min-height:0}.game-status{font-size:7px}.game-footer{font-size:7px;height:42px;padding:0 12px}}
+  </style>
+  <style>.touch-device .screen{touch-action:none;overscroll-behavior:contain}.touch-device .game-wrap{touch-action:pan-y}</style>
+</head>
+<body>
+  <header class="gamebar"><a class="gamebar-back" href="index.html"><span>←</span> Volver</a><div class="gamebar-title">AnotherDungeon <i>·</i> ALPHA v2</div><span class="gamebar-tip">PANTALLA COMPLETA DISPONIBLE EN EL MENÚ</span></header>
+  <main class="game-wrap"><div class="screen"><div id="game"></div></div><div class="game-status"><span>EMULADOR GBA</span><span id="controls-instructions">USA EL MENÚ DEL JUEGO PARA CONFIGURAR LOS CONTROLES</span></div></main>
+  <footer class="game-footer">Si el juego no inicia, abre esta página desde un servidor local y comprueba tu conexión a internet.</footer>
+  <script>
+    const hasTouchInput = navigator.maxTouchPoints > 0 || window.matchMedia("(pointer: coarse)").matches;
+    EJS_browserMode = hasTouchInput ? "mobile" : "desktop";
+    EJS_Buttons = { gamepad: hasTouchInput };
+    EJS_color = "#d8d9a5";
+    EJS_backgroundColor = "#17190f";
+    if (hasTouchInput) {
+      document.documentElement.classList.add("touch-device");
+      document.getElementById("controls-instructions").textContent = "CONTROLES TÁCTILES ACTIVADOS · TOCA PARA JUGAR";
+    }
+    EJS_player = "#game";
+    EJS_core = "gba";
+    EJS_gameName = "AnotherDungeon";
+    EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+    EJS_gameUrl = "alphav2.gba";
+  </script>
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>

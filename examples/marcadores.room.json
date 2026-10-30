@@ -1,0 +1,121 @@
+{
+  "format": "anotherdungeon-room",
+  "schemaVersion": 2,
+  "id": "ejemplo-marcadores",
+  "name": "Cuarto con Q y recompensa",
+  "description": "Ejemplo de Q, &, colisi?n invisible y enemigo por semilla.",
+  "width": 256,
+  "height": 256,
+  "tileSize": 16,
+  "coordinateSystem": "top-left-pixels",
+  "background": "room2",
+  "backgroundCrop": {
+    "x": 0,
+    "y": 0,
+    "width": 256,
+    "height": 256
+  },
+  "gameGrid": {
+    "x": 8,
+    "y": 48,
+    "cellSize": 16,
+    "columns": 15,
+    "rows": 10
+  },
+  "rules": {
+    "roomType": "standard",
+    "onlyTheseSides": true,
+    "allowedDoorSides": [
+      "left",
+      "right"
+    ],
+    "access": "normal"
+  },
+  "spawn": null,
+  "tiles": [],
+  "collisions": [
+    {
+      "x": 56,
+      "y": 64,
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "objects": [
+    {
+      "id": "caja-1",
+      "assetId": "box",
+      "x": 40,
+      "y": 80,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": true,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "decoration",
+      "behavior": null
+    },
+    {
+      "id": "murcielago-1",
+      "assetId": "bat",
+      "x": 80,
+      "y": 96,
+      "frame": 5,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "enemy",
+      "behavior": null,
+      "enemy": {
+        "spawnMode": "seeded",
+        "patrol": null
+      }
+    },
+    {
+      "id": "pinchos-1",
+      "assetId": "spikes",
+      "x": 112,
+      "y": 112,
+      "frame": 0,
+      "rotation": 0,
+      "flipX": false,
+      "solid": false,
+      "hitbox": {
+        "x": 3,
+        "y": 0,
+        "width": 10,
+        "height": 8
+      },
+      "role": "hazard",
+      "alwaysActive": false,
+      "behavior": null
+    }
+  ],
+  "markers": [
+    {
+      "id": "q-1",
+      "type": "Q",
+      "x": 120,
+      "y": 96,
+      "required": false
+    },
+    {
+      "id": "habilidad-1",
+      "type": "&",
+      "x": 152,
+      "y": 96,
+      "required": true
+    }
+  ]
+}
